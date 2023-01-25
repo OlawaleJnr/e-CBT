@@ -16,7 +16,7 @@ class APIVersion
      */
     public function handle($request, Closure $next, $guard)
     {
-        config(['app.api.version' => $guard]);
+        config(['app.api_latest' => $guard]);
         return $next($request);
     }
 }
